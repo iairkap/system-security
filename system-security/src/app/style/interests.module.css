@@ -1,0 +1,24 @@
+.listContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1rem;
+  row-gap: 1rem;
+}
+
+.sub {
+  font-size: 1rem;
+  margin: 0px;
+  font-weight: 300;
+  color: rgb(233, 233, 53);
+  text-align: r;
+}
+
+.generalContainer {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.interest {
+  list-style-type: none;
+}

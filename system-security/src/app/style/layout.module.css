@@ -1,0 +1,28 @@
+.main {
+  min-width: 100dvw;
+  /*   background: linear-gradient(
+    90deg,
+    #0f0c29 0.9%,
+    #302b63 49.81%,
+    #24243e 98.72%
+  ); */
+  background-color: #121212;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+@media (width <= 1000px) {
+}
+
+@media (width <=768px) {
+  .main {
+    /*     display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+}
