@@ -2,11 +2,14 @@ import { ChangeEvent } from 'react';
 import type { TextAreaProps } from '../types/types';
 import styles from "../style/textArea.module.css"
 
-const TextArea: React.FC<TextAreaProps> = ({ id, name, value, onChange, required = false }) => {
+const TextArea: React.FC<TextAreaProps> = ({ id, name, value, onChange, error }) => {
     return (
         <div className={styles.container}>
-            <label htmlFor={id} className={styles.label}>{name}:</label>
-            <textarea id={id} name={name} value={value} onChange={onChange} required={required} className={styles.textArae} rows={10} />
+            <div className={styles.labelErrorcontainer}>
+                <label htmlFor={id} className={styles.label}>{name}:</label>
+                {error && <span className={styles.error}>{error}</span>}
+            </div>
+            <textarea id={id} name={name} value={value} onChange={onChange} className={styles.textArae} rows={10} />
         </div>
     );
 };
