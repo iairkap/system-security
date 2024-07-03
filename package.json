@@ -1,14 +1,14 @@
 {
   "name": "system-security",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "install-deps": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@testing-library/react-hooks": "^8.0.1",
