@@ -19,6 +19,14 @@ export type FormData = {
   name: string;
   email: string;
   message: string;
+  [key: string]: string; // Adding an index signature
+};
+
+export type FormField = {
+  id: string;
+  name: keyof FormData;
+  type: string;
+  component: React.FC<InputProps | TextAreaProps>;
 };
 
 export type TextAreaProps = {
@@ -34,7 +42,7 @@ export type InputProps = {
   id: string;
   name: string;
   type: string;
-  value: string;
+  value?: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
   error?: string;
