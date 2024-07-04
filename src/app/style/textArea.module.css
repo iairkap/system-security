@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textArea,
+.textAreaError {
+  resize: none;
+  width: 100%;
+  min-height: calc(1.5em * 10);
+  background-color: transparent;
+  border: 1px solid rgb(80, 179, 232);
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.textArea:focus,
+.textAreaError:focus {
+  outline: 0 none;
+  border: 1px solid rgb(80, 179, 232);
+}
+.textAreaError,
+.textAreaError:focus,
+.textAreaError:focus-visible {
+  border: 1px solid rgb(180, 75, 75);
+}
+
+.textArae:focus-visible {
+  outline: 0 none;
+  border: 1px solid rgb(80, 179, 232);
+}
+
+.error {
+  color: rgb(160, 64, 64);
+  font-size: 0.8rem;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.labelErrorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

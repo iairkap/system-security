@@ -1,8 +1,6 @@
 "use client"
 
 import React from 'react';
-import Input from "./Input";
-import TextArea from "./TextArea";
 import useForm from "../hooks/useForm";
 import styles from '../style/contactForm.module.css';
 import Button from './Button';
@@ -12,6 +10,7 @@ interface Props { }
 
 const ContactForm: React.FC<Props> = () => {
     const { formData, handleChange, handleSubmit, errors } = useForm({ name: '', email: '', message: '' });
+
 
     const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         handleSubmit(event, () => {
