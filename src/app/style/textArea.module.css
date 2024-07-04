@@ -1,4 +1,11 @@
-.textArae {
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textArea,
+.textAreaError {
   resize: none;
   width: 100%;
   min-height: calc(1.5em * 10);
@@ -8,9 +15,15 @@
   border-radius: 0.3rem;
 }
 
-.textArea:focus {
+.textArea:focus,
+.textAreaError:focus {
   outline: 0 none;
   border: 1px solid rgb(80, 179, 232);
+}
+.textAreaError,
+.textAreaError:focus,
+.textAreaError:focus-visible {
+  border: 1px solid rgb(180, 75, 75);
 }
 
 .textArae:focus-visible {
@@ -20,10 +33,12 @@
 
 .error {
   color: rgb(160, 64, 64);
-  margin-left: 1rem;
+  font-size: 0.8rem;
 }
 
 .labelErrorContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }

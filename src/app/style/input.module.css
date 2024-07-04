@@ -4,7 +4,8 @@
   gap: 0.5rem;
 }
 
-.input {
+.input,
+.inputError {
   width: 100%;
   background-color: transparent;
   border: 1px solid rgb(80, 179, 232);
@@ -12,17 +13,25 @@
   border-radius: 0.3rem;
 }
 
-.input:focus-visible {
+.input:focus-visible,
+.inputError:focus-visible {
   outline: 0 none;
   border: 1px solid rgb(80, 179, 232);
 }
 
+.inputError,
+.inputError:focus-visible {
+  border: 1px solid rgb(180, 75, 75);
+}
+
 .error {
   color: rgb(160, 64, 64);
-  margin-left: 1rem;
+  font-size: 0.8rem;
 }
 
 .labelErrorContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
