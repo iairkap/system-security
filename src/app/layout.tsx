@@ -1,7 +1,7 @@
 
 
 import "./globals.css";
-import GlobalContextProvider from "../app/userContext"; // Ajusta la ruta según sea necesario
+import GlobalContextProvider from "../app/userContext";
 import Script from "next/script";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

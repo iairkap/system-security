@@ -19,7 +19,7 @@ export type FormData = {
   name: string;
   email: string;
   message: string;
-  [key: string]: string; // Adding an index signature
+  [key: string]: string;
 };
 
 export type FormField = {
