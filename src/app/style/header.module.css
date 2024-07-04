@@ -54,3 +54,22 @@
   z-index: -1;
   background-color: rgb(80, 179, 232);
 }
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(2%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.userInfoContainer {
+  animation: 0.8s ease-out 0s 1 slideInFromRight;
+}
